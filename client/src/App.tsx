@@ -2,20 +2,24 @@ import React from 'react'
 import {BrowserRouter} from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Routing from './components/Routing'
-import {Context} from './Context'
+import {Provider} from 'react-redux'
 import initSocket from './socket/init.socket'
+import {Context} from './Context'
+import {store} from './store/store'
 import './App.scss'
 
 function App() {
-  console.log(22222)
+  console.log(111)
 
   return (
-    <Context.Provider value={initSocket()}>
-      <BrowserRouter>
-        <Navigation/>
-        <Routing/>
-      </BrowserRouter>
-    </Context.Provider>
+    <Provider store={store}>
+      <Context.Provider value={initSocket()}>
+        <BrowserRouter>
+          <Navigation/>
+          <Routing/>
+        </BrowserRouter>
+      </Context.Provider>
+    </Provider>
   )
 }
 
