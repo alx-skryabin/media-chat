@@ -23,7 +23,7 @@ app.use(cors())
 const {httpServer, io} = require('./server/socket/create.socket')(app)
 
 io.on('connection', socket => {
-  console.log('Socket event init')
+  console.log('Socket event init', socket.id)
   signIn(socket)
 })
 
