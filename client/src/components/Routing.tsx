@@ -1,8 +1,8 @@
 import React from 'react'
 import {Route, Routes,} from 'react-router-dom'
-import Home from '../Pages/Home'
-import Call from '../Pages/Call'
-import Page404 from '../Pages/404'
+import Home from '../pages/Home'
+import Call from '../pages/Call'
+import Page404 from '../pages/404'
 
 function Routing() {
   return (
