@@ -1,0 +1,15 @@
+@import "~normalize.css";
+@import "~antd/dist/antd.css";
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-color: #ccc #eee;
+  scrollbar-width: thin;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
