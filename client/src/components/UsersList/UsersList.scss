@@ -1,0 +1,19 @@
+.ts_users-list {
+  ul {
+    width: 400px;
+    padding: 0;
+    margin: 10px auto;
+  }
+
+  li {
+    text-align: left !important;
+    list-style-type: none;
+    font-size: 1.2em;
+    padding: 0 10px;
+
+    i {
+      font-size: .9em;
+      margin-right: 10px;
+    }
+  }
+}

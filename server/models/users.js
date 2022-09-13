@@ -1,13 +1,18 @@
 const users = []
 
-const addUser = (id, room, avatar, root = false) => {
-  const user = {id, room, avatar, root}
+const addUser = (id, room, name) => {
+  const user = {id, room, name}
   users.push(user)
   return user
 }
 
 const getUser = id => {
   return users.find(user => user.id === id)
+}
+
+const clearUsers = () => {
+  // users.length = 0
+  users.splice(0, users.length)
 }
 
 const deleteUser = id => {
@@ -19,4 +24,4 @@ const getUsers = room => users.filter(user => user.room === room && !user.root)
 
 const getAllUsers = () => users
 
-module.exports = {addUser, getUser, deleteUser, getUsers, getAllUsers}
+module.exports = {addUser, clearUsers, getUser, deleteUser, getUsers, getAllUsers}

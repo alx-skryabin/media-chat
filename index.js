@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const {signIn} = require('./server/socket/sign-in.event')
+const {debug} = require('./server/socket/debug.event')
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -24,7 +25,9 @@ const {httpServer, io} = require('./server/socket/create.socket')(app)
 
 io.on('connection', socket => {
   console.log('Socket event init', socket.id)
-  signIn(socket)
+
+  signIn(socket, io)
+  debug(socket)
 })
 
 httpServer.listen(PORT, () => {

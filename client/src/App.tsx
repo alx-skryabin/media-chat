@@ -9,8 +9,6 @@ import {store} from './store/store'
 import './App.scss'
 
 function App() {
-  console.log(111)
-
   return (
     <Provider store={store}>
       <Context.Provider value={initSocket()}>
